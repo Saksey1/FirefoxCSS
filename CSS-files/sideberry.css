@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@450&display=swap");
 
 #root.root {
-  --sidebar-hover-width: 52px;
-  --sidebar-visible-width: 320px;
   --ntb-border-radius: 0px;
   --notification-border-radius: 5px;
   --tabs-margin: 5px;
@@ -61,20 +59,4 @@
   height: 30px;
   border-radius: 8px;
   margin: 0px 0px 15px 0px;
-}
-
-#TabsToolbar,
-#sidebar-header {
-  display: none !important;
-}
-
-#sidebar-box {
-  position: relative !important;
-  overflow: hidden;
-  max-width: var(--sidebar-hover-width) !important;
-}
-
-#sidebar-box:hover {
-  transition: all 200ms !important;
-  max-width: var(--sidebar-visible-width) !important;
 }
