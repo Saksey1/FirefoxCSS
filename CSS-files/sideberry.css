@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@450&display=swap");
 
 #root.root {
-	--sidebar-hover-width: 52px;
+  --sidebar-hover-width: 52px;
   --sidebar-visible-width: 320px;
   --ntb-border-radius: 0px;
   --notification-border-radius: 5px;
@@ -24,7 +24,7 @@
   --frame-el-bg: rgb(21, 21, 21);
   --nav-btn-active-shadow: 0 1px 20px -1px rgba(0, 0, 0, 0);
   --frame-el-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.133);
-  --tabs-normal-bg: rgb(21,21, 21);
+  --tabs-normal-bg: rgb(21, 21, 21);
   --tabs-height: 35px;
   --tabs-count-font: 0.5625rem inter;
   --tabs-border-radius: 8px;
@@ -63,13 +63,14 @@
   margin: 0px 0px 15px 0px;
 }
 
-#TabsToolbar, #sidebar-header {
+#TabsToolbar,
+#sidebar-header {
   display: none !important;
 }
 
 #sidebar-box {
   position: relative !important;
-  overflow:hidden;
+  overflow: hidden;
   max-width: var(--sidebar-hover-width) !important;
 }
 
