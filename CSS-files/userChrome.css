@@ -2,49 +2,56 @@
     /* delay before expanding tabs, set to '0' for no delay */
     --delay: 0.5s;
     --transition-time: 0.2s;
-    --positionX1: 48px; /* '48px' for left, '0px' for right sidebar */
-    --positionX2: absolute; /* 'absolute' for left, 'none' for right sidebar */
+    --positionX1: 48px;
+    /* '48px' for left, '0px' for right sidebar */
+    --positionX2: absolute;
+    /* 'absolute' for left, 'none' for right sidebar */
     /* width of the collapsed sidebar in fullscreen mode ('1px' or '48px') */
     --fullscreen-sidebar-width: 1px;
 }
 
 /* Windows specific styles */
 @media (-moz-platform: windows),
-       (-moz-platform: windows-win10) {
+(-moz-platform: windows-win10) {
+
     /* Hide main tabs toolbar */
-    :root[tabsintitlebar]{
-        --uc-window-control-width: 137px; /* Space at the right of nav-bar for window controls */
-        /* --uc-window-drag-space-width: 24px; */  /* To add extra window drag space in nav-bar */
+    :root[tabsintitlebar] {
+        --uc-window-control-width: 137px;
+        /* Space at the right of nav-bar for window controls */
+        /* --uc-window-drag-space-width: 24px; */
+        /* To add extra window drag space in nav-bar */
     }
 
-    #nav-bar{
-        border-inline: var(--uc-window-drag-space-width,80px) solid var(--toolbar-bgcolor) ;
+    #nav-bar {
+        border-inline: var(--uc-window-drag-space-width, 80px) solid var(--toolbar-bgcolor);
         border-inline-style: solid !important;
-        border-right-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-width,0px));
+        border-right-width: calc(var(--uc-window-control-width, 0px) + var(--uc-window-drag-space-width, 0px));
 
-        padding-top: .5px !important; /* This makes it possible to drag the maximized window. */
-        margin-left: -80px; /* Removes the space left when hiding .titlebar-buttonbox-container */
+        padding-top: .5px !important;
+        /* This makes it possible to drag the maximized window. */
+        margin-left: -80px;
+        /* Removes the space left when hiding .titlebar-buttonbox-container */
     }
-    
-    #back-button { 
-		margin-top: -.5px !important; 
-	}
-	
-	#forward-button { 
-		margin-top: -.5px !important; 
-	}
-	
-	#reload-button { 
-		margin-top: -.5px !important; 
-	}
-    
-	#PanelUI-button {
-		margin-top: -.5px !important; 
-	}
-    
-	#nav-bar-overflow-button{
-		margin-top: -.5px !important; 
-	}
+
+    #back-button {
+        margin-top: -.5px !important;
+    }
+
+    #forward-button {
+        margin-top: -.5px !important;
+    }
+
+    #reload-button {
+        margin-top: -.5px !important;
+    }
+
+    #PanelUI-button {
+        margin-top: -.5px !important;
+    }
+
+    #nav-bar-overflow-button {
+        margin-top: -.5px !important;
+    }
 
     :root {
         --uc-toolbar-height: 32px;
@@ -63,6 +70,7 @@
     #TabsToolbar .titlebar-buttonbox-container {
         visibility: hidden !important;
     }
+
     /* Line up the Windows controls with the rest of the icons in the toolbar. */
     :root:not([sizemode="maximized"]) .titlebar-buttonbox-container {
         margin-top: 3px;
@@ -82,32 +90,32 @@
 
     /* For a rounded button design, uncomment both lines in .titlebar-buttonbox. */
     .titlebar-buttonbox {
-        z-index:3 !important;
+        z-index: 3 !important;
         /* padding-right:3px; */
     }
 
     .titlebar-buttonbox * {
         /* border-radius: 5px; */
-        width:35px;
-        height:38px;
+        width: 35px;
+        height: 38px;
     }
 
     #main-menubar {
         -moz-box-flex: 1;
-        background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor);
+        background-color: var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor);
         background-clip: padding-box;
         border-right: 30px solid transparent;
-        border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20 / 30px;
+        border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor) 30px) 20 / 30px;
     }
 
     #toolbar-menubar:not([inactive]) {
         z-index: 2;
     }
 
-    #toolbar-menubar[inactive] > #menubar-items {
+    #toolbar-menubar[inactive]>#menubar-items {
         opacity: 0;
         pointer-events: none;
-        margin-left: var(--uc-window-drag-space-width,0px);
+        margin-left: var(--uc-window-drag-space-width, 0px);
     }
 
     :root[inFullscreen] #nav-bar {
@@ -120,11 +128,12 @@
     position: relative;
 }
 
-#nav-bar, #urlbar {
+#nav-bar,
+#urlbar {
     z-index: 100;
 }
 
-#sidebar-header{
+#sidebar-header {
     display: none;
 }
 
@@ -146,85 +155,102 @@ See the above repository for updates as well as full license text. */
 /* Show sidebar only when the cursor is over it  */
 /* The border controlling sidebar width will be removed so you'll need to modify these values to change width */
 
-#sidebar-box{
+#sidebar-box {
     --uc-sidebar-width: 40px;
     --uc-sidebar-hover-width: 210px;
-    --uc-autohide-sidebar-delay: 600ms; /* Wait 0.6s before hiding sidebar */
+    --uc-autohide-sidebar-delay: 600ms;
+    /* Wait 0.6s before hiding sidebar */
     --uc-autohide-transition-duration: 115ms;
     --uc-autohide-transition-type: linear;
     position: relative;
     min-width: var(--uc-sidebar-width) !important;
     width: var(--uc-sidebar-width) !important;
     max-width: var(--uc-sidebar-width) !important;
-    z-index:1;
-  }
-  
-  #sidebar-box[positionend]{ direction: rtl }
-  #sidebar-box[positionend] > *{ direction: ltr }
-  
-  #sidebar-box[positionend]:-moz-locale-dir(rtl){ direction: ltr }
-  #sidebar-box[positionend]:-moz-locale-dir(rtl) > *{ direction: rtl }
-  
-  #main-window[sizemode="fullscreen"] #sidebar-box{ --uc-sidebar-width: 1px; }
-  
-  #sidebar-splitter{ display: none }
-  
-  #sidebar-header{
+    z-index: 1;
+}
+
+#sidebar-box[positionend] {
+    direction: rtl
+}
+
+#sidebar-box[positionend]>* {
+    direction: ltr
+}
+
+#sidebar-box[positionend]:-moz-locale-dir(rtl) {
+    direction: ltr
+}
+
+#sidebar-box[positionend]:-moz-locale-dir(rtl)>* {
+    direction: rtl
+}
+
+#main-window[sizemode="fullscreen"] #sidebar-box {
+    --uc-sidebar-width: 1px;
+}
+
+#sidebar-splitter {
+    display: none
+}
+
+#sidebar-header {
     overflow: hidden;
     color: var(--chrome-color, inherit) !important;
     padding-inline: 0 !important;
-  }
-  
-  #sidebar-header::before,
-  #sidebar-header::after{
+}
+
+#sidebar-header::before,
+#sidebar-header::after {
     content: "";
     display: flex;
     padding-left: 8px;
-  }
-  
-  #sidebar-header,
-  #sidebar{
+}
+
+#sidebar-header,
+#sidebar {
     transition: min-width var(--uc-autohide-transition-duration) var(--uc-autohide-transition-type) var(--uc-autohide-sidebar-delay) !important;
     min-width: var(--uc-sidebar-width) !important;
     will-change: min-width;
-  }
-  #sidebar-box:hover > #sidebar-header,
-  #sidebar-box:hover > #sidebar{
+}
+
+#sidebar-box:hover>#sidebar-header,
+#sidebar-box:hover>#sidebar {
     min-width: var(--uc-sidebar-hover-width) !important;
     transition-delay: 0ms !important;
-  }
-  
-  .sidebar-panel{
+}
+
+.sidebar-panel {
     background-color: transparent !important;
     color: var(--newtab-text-primary-color) !important;
-  }
-  
-  .sidebar-panel #search-box{
+}
+
+.sidebar-panel #search-box {
     -moz-appearance: none !important;
-    background-color: rgba(249,249,250,0.1) !important; 
+    background-color: rgba(249, 249, 250, 0.1) !important;
     color: inherit !important;
-  }
-  
-  /* Add sidebar divider and give it background */
-  
-  #sidebar,
-  #sidebar-header{
+}
+
+/* Add sidebar divider and give it background */
+
+#sidebar,
+#sidebar-header {
     background-color: inherit !important;
-    border-inline: 1px solid rgb(80,80,80);
+    border-inline: 1px solid rgb(80, 80, 80);
     border-inline-width: 0px 1px;
-  }
-  
-  #sidebar-box:not([positionend]) > :-moz-locale-dir(rtl),
-  #sidebar-box[positionend] > *{
+}
+
+#sidebar-box:not([positionend])> :-moz-locale-dir(rtl),
+#sidebar-box[positionend]>* {
     border-inline-width: 1px 0px;
-  }
-  
-  /* Move statuspanel to the other side when sidebar is hovered so it doesn't get covered by sidebar */
-  
-  #sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel{
+}
+
+/* Move statuspanel to the other side when sidebar is hovered so it doesn't get covered by sidebar */
+
+#sidebar-box:not([positionend]):hover~#appcontent #statuspanel {
     inset-inline: auto 0px !important;
-  }
-  #sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel-label{
+}
+
+#sidebar-box:not([positionend]):hover~#appcontent #statuspanel-label {
     margin-inline: 0px !important;
-    border-left-style: solid !important; 
-  }
+    border-left-style: solid !important;
+}
