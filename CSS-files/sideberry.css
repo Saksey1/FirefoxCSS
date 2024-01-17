@@ -7,7 +7,7 @@
   --toolbar-bg: rgb(21, 21, 21);
   --history-item-margin: 10px;
   --bookmarks-inner-gap: 10px;
-  --bookmarks-bookmark-height: 40px;
+  --bookmarks-bookmark-height: 30px;
   --bookmarks-margin: 10px;
   --bookmarks-border-radius: 8px;
   --bookmarks-folder-font: 0.9rem inter;
@@ -32,7 +32,7 @@
   --tabs-activated-fg: rgb(210, 210, 210);
   --tabs-font: 0.9rem inter;
   --ntb-border-radius: 8px;
-  --ntb-btn-height: 40px;
+  --ntb-btn-height: 30px;
   --ntb-bg: rgb(21, 21, 21);
   --ntb-padding: 5px;
 }
@@ -49,14 +49,14 @@
 }
 
 .group>.SubListTitle>.body {
-  height: 40px;
+  height: 30px;
   box-shadow: 0 1px 20px -1px rgba(0, 0, 0, 0.882);
   border-radius: 8px;
   margin: 0px 0px 15px 0px;
 }
 
 .group>.SubListTitle>.body::before {
-  height: 40px;
+  height: 30px;
   border-radius: 8px;
   margin: 0px 0px 15px 0px;
 }
