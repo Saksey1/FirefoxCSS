@@ -1,46 +1,63 @@
+/* used POE to add comments into this CSS file
+/* Import the 'Inter' font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@450&display=swap");
 
+/* Define the CSS variables */
+
+/* Styling for the root element */
 #root.root {
-  --ntb-border-radius: 0px;
-  --notification-border-radius: 5px;
-  --tabs-margin: 5px;
+  /* Toolbar */
+  /* Background color for the toolbar */
   --toolbar-bg: rgb(21, 21, 21);
-  --history-item-margin: 10px;
+
+  /* Bookmarks */
+
+  /* Inner gap for bookmarks */
   --bookmarks-inner-gap: 10px;
+  /* Height of bookmarks */
   --bookmarks-bookmark-height: 30px;
+  /* Margin for bookmarks */
   --bookmarks-margin: 10px;
+  /* Border radius for bookmarks */
   --bookmarks-border-radius: 8px;
+  /* Font size for bookmark folders */
   --bookmarks-folder-font: 0.9rem inter;
+  /* Font size for bookmarks */
   --bookmarks-bookmark-font: 0.8rem inter;
+
+  /* Tabs */
+
+  /* Margin for tabs */
+  --tabs-margin: 5px;
+  /* Inner gap for tabs */
   --tabs-inner-gap: 2px;
-  --history-item-border-radius: 8px;
-  --active-el-shadow: 0 1px 20px -1px rgba(0, 0, 0, 0.882);
-  --search-shadow: 0 1px 20px -1px rgba(0, 0, 0, 0.882);
-  --ctx-menu-shadow: 0 1px 20px -1px rgba(0, 0, 0, 0.882);
-  --popup-shadow: 0 1px 20px -1px rgba(0, 0, 0, 0.882);
-  --tabs-activated-shadow: 0px 4px 15px 5px #00000050;
-  --frame-el-bg: rgb(21, 21, 21);
-  --nav-btn-active-shadow: 0 1px 20px -1px rgba(0, 0, 0, 0);
-  --frame-el-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.133);
-  --tabs-normal-bg: rgb(21, 21, 21);
+  /* Height of tabs */
   --tabs-height: 35px;
+  /* Font size for tab counts */
   --tabs-count-font: 0.5625rem inter;
+  /* Border radius for tabs */
   --tabs-border-radius: 8px;
-  --tabs-audio-btn-width: 25px;
-  --tabs-progress-bg: rgba(255, 255, 255, 1);
-  --tabs-activated-bg: rgb(153, 153, 153);
-  --tabs-activated-fg: rgb(0, 0, 0);
-  --tabs-font: 0.9rem inter;
-  --ntb-border-radius: 8px;
-  --ntb-btn-height: 30px;
-  --ntb-bg: rgb(21, 21, 21);
-  --ntb-padding: 5px;
+
+  /* Miscellaneous */
+
+  /* Margin for history items */
+  --history-item-margin: 10px;
+  /* Shadow for active elements */
+  --active-el-shadow: 0 1px 20px -1px rgba(0, 0, 0, 0.882);
+  /* Shadow for activated tabs */
+  --tabs-activated-shadow: 0px 4px 15px 5px #00000050;
+  /* Background color for frame elements */
+  --frame-el-bg: rgb(21, 21, 21);
+  /* Shadow for frame elements */
+  --frame-el-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.133);
 }
 
+/* Styling for the new tab button */
 .new-tab-btn {
   margin: 2px;
 }
 
+/* Styling for the group */
 .group>.SubListTitle {
   height: 30px;
   border-radius: 8px;
@@ -48,6 +65,7 @@
   margin: 0px 0px 15px 0px;
 }
 
+/* Styling for the group body */
 .group>.SubListTitle>.body {
   height: 30px;
   box-shadow: 0 1px 20px -1px rgba(0, 0, 0, 0.882);
@@ -55,6 +73,7 @@
   margin: 0px 0px 15px 0px;
 }
 
+/* Styling for the group body before pseudo-element */
 .group>.SubListTitle>.body::before {
   height: 30px;
   border-radius: 8px;
