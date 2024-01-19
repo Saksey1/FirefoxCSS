@@ -8,20 +8,25 @@
 #root.root {
   /* Toolbar */
   /* Background color for the toolbar */
-  --toolbar-bg: rgb(21, 21, 21);
+  --toolbar-bg: rgb(0, 0, 0) !important;
 
   /* Bookmarks */
 
   /* Inner gap for bookmarks */
   --bookmarks-inner-gap: 10px;
+
   /* Height of bookmarks */
   --bookmarks-bookmark-height: 30px;
+
   /* Margin for bookmarks */
   --bookmarks-margin: 10px;
+
   /* Border radius for bookmarks */
   --bookmarks-border-radius: 8px;
+
   /* Font size for bookmark folders */
   --bookmarks-folder-font: 0.9rem inter;
+
   /* Font size for bookmarks */
   --bookmarks-bookmark-font: 0.8rem inter;
 
@@ -29,12 +34,16 @@
 
   /* Margin for tabs */
   --tabs-margin: 5px;
+
   /* Inner gap for tabs */
   --tabs-inner-gap: 2px;
+
   /* Height of tabs */
   --tabs-height: 35px;
+
   /* Font size for tab counts */
   --tabs-count-font: 0.5625rem inter;
+
   /* Border radius for tabs */
   --tabs-border-radius: 8px;
 
@@ -42,12 +51,22 @@
 
   /* Margin for history items */
   --history-item-margin: 10px;
+
   /* Shadow for active elements */
   --active-el-shadow: 0 1px 20px -1px rgba(0, 0, 0, 0.882);
+
+  /* background for active elements */
+  --active-el-bg: rgb(127, 127, 127);
+
+  /* foreground for active elements */
+  --active-el-fg: rgb(0, 0, 0);
+
   /* Shadow for activated tabs */
   --tabs-activated-shadow: 0px 4px 15px 5px #00000050;
+
   /* Background color for frame elements */
-  --frame-el-bg: rgb(21, 21, 21);
+  --frame-el-bg: rgb(0, 0, 0);
+  
   /* Shadow for frame elements */
   --frame-el-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.133);
 }
@@ -69,7 +88,7 @@
 .group>.SubListTitle>.body {
   height: 30px;
   box-shadow: 0 1px 20px -1px rgba(0, 0, 0, 0.882);
-  border-radius: 8px;
+  border-radius:0px;
   margin: 0px 0px 15px 0px;
 }
 
